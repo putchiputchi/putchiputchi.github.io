@@ -1,17 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.2c258b39.css",
-    "main.js": "/static/js/main.6916d67c.js",
+    "main.js": "/static/js/main.4895ecae.js",
     "static/js/453.c173b4f9.chunk.js": "/static/js/453.c173b4f9.chunk.js",
+    "static/media/eminence1.png": "/static/media/eminence1.91a67e22425fdc90aea5.png",
+    "static/media/majesticfountains1.png": "/static/media/majesticfountains1.6eb0539b49978f7dc469.png",
     "static/media/cyberalerts.png": "/static/media/cyberalerts.6d5f881f3047cdd59340.png",
     "static/media/ionicaid-1.png": "/static/media/ionicaid-1.82f197512057350c75d8.png",
     "static/media/chauvet-pro-1.png": "/static/media/chauvet-pro-1.ad0e5c86b8ad18323fb7.png",
+    "static/media/gosu-1.png": "/static/media/gosu-1.59f8e947f3d472cc9db5.png",
     "static/media/BROL - home-proof-changes.jpg": "/static/media/BROL - home-proof-changes.5a0272b138c47fee8dc5.jpg",
     "static/media/rosetta-About.jpg": "/static/media/rosetta-About.d51a4eb988f6c4598d72.jpg",
     "static/media/BROL - Vacations - Single.jpg": "/static/media/BROL - Vacations - Single.f82370615e2467c521db.jpg",
     "static/media/LifestimeCapsule-2.png": "/static/media/LifestimeCapsule-2.009899f61e29ba73e392.png",
     "static/media/rosetta-Home.jpg": "/static/media/rosetta-Home.db43c0f79eb607b1d1d6.jpg",
+    "static/media/gosu-2.png": "/static/media/gosu-2.c3e9b931ad2faf26b7ca.png",
+    "static/media/gosu-3.png": "/static/media/gosu-3.e121ce7644185668bd3d.png",
+    "static/media/palit-home.png": "/static/media/palit-home.3a3e8bfa4c15d400b269.png",
     "static/media/LifestimeCapsule-1.png": "/static/media/LifestimeCapsule-1.b090a007603cff9d47b9.png",
+    "static/media/segmate1.png": "/static/media/segmate1.5ed96b72118265aca708.png",
     "static/media/phaselabs1.png": "/static/media/phaselabs1.9a57a942331a601e5330.png",
     "static/media/The Military Heart.png": "/static/media/The Military Heart.738325ec247328c5afc8.png",
     "static/media/rosetta-Food.jpg": "/static/media/rosetta-Food.2547792e8c5103c362de.jpg",
@@ -22,16 +29,19 @@
     "static/media/aspgear-index.jpg": "/static/media/aspgear-index.19426bddc6857ca18909.jpg",
     "static/media/chauvet-dj.png": "/static/media/chauvet-dj.edd6ced15754dbbe2ce2.png",
     "static/media/Jax Axe.png": "/static/media/Jax Axe.edc0857322f97b45637e.png",
+    "static/media/gosu-4.png": "/static/media/gosu-4.223eac0903dbc4583bde.png",
     "static/media/chauvet-pro-3.png": "/static/media/chauvet-pro-3.008dbdf7480a308b151e.png",
     "static/media/Health Insurance Florida.png": "/static/media/Health Insurance Florida.faf3bc4ff45397d6a771.png",
+    "static/media/palit-2.png": "/static/media/palit-2.4ba60ed6b47927f8c9ee.png",
+    "static/media/palit-3.png": "/static/media/palit-3.8361168c86eba34c395e.png",
     "static/media/me.jpg": "/static/media/me.6312ad5d566b5ff347a7.jpg",
     "index.html": "/index.html",
     "main.2c258b39.css.map": "/static/css/main.2c258b39.css.map",
-    "main.6916d67c.js.map": "/static/js/main.6916d67c.js.map",
+    "main.4895ecae.js.map": "/static/js/main.4895ecae.js.map",
     "453.c173b4f9.chunk.js.map": "/static/js/453.c173b4f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2c258b39.css",
-    "static/js/main.6916d67c.js"
+    "static/js/main.4895ecae.js"
   ]
 }
