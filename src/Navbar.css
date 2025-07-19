@@ -1,0 +1,156 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    background-color: #282c34; /* Dark background similar to your existing */
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    position: relative; /* Crucial for absolute positioning of the menu */
+    z-index: 1000; /* Ensure navbar stays on top */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px; /* Match your content width */
+    margin: 0 auto;
+    padding: 0 15px; /* Inner padding */
+  }
+  
+  .navbar-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: bold;
+    user-select: none; /* Prevent text selection */
+    padding: 5px 0; /* Add a little vertical padding */
+  }
+  
+  /* Menu Icon (Hamburger) container */
+  .menu-icon {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 2em; /* This font-size is no longer directly styling the bars, but sets context */
+    color: white; /* This color is no longer directly styling the bars */
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: transform 0.3s ease;
+    z-index: 1001; /* Ensure icon is clickable above menu */
+  
+    /* NEW: Styles for the hamburger bars */
+    width: 40px; /* Width of the hamburger icon */
+    height: 30px; /* Overall height of the hamburger icon */
+    position: relative; /* For positioning the bars inside */
+    flex-direction: column;
+    justify-content: space-between; /* Distribute bars vertically */
+  }
+  
+  .menu-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Styles for each individual bar */
+  .menu-icon div {
+    width: 100%;
+    height: 3px; /* Thickness of each bar */
+    background-color: white; /* Color of the bars */
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for transformation */
+    transform-origin: center; /* Important for rotation */
+  }
+  
+  /* Transformation when the menu is active (hamburger becomes X) */
+  .menu-icon.active .bar1 {
+    transform: translateY(8px) rotate(45deg); /* Move down and rotate */
+  }
+  
+  .menu-icon.active .bar2 {
+    opacity: 0; /* Hide the middle bar */
+    transform: translateX(-20px); /* Move out of view */
+  }
+  
+  .menu-icon.active .bar3 {
+    transform: translateY(-9px) rotate(-45deg); /* Move up and rotate */
+  }
+  
+  
+  /* Navigation Menu */
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display links horizontally on desktop */
+    gap: 30px; /* Space between links */
+  }
+  
+  .nav-item {
+    position: relative; /* For potential future dropdowns */
+  }
+  
+  .nav-links {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 8px 0; /* Vertical padding for click area */
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: block; /* Makes the entire padding clickable */
+  }
+  
+  .nav-links:hover {
+    color: #007bff; /* Accent color on hover */
+    transform: translateY(-2px); /* Subtle lift */
+  }
+  
+  /* --- Responsive Styles for Navbar --- */
+  @media (max-width: 768px) {
+    .navbar-container {
+      flex-wrap: wrap; /* Allow items to wrap */
+    }
+  
+    .menu-icon {
+      display: flex; /* Show hamburger menu on small screens and use flexbox */
+    }
+  
+    .nav-menu {
+      flex-direction: column; /* Stack links vertically on mobile */
+      width: 100%; /* Take full width */
+      height: 0; /* Initially hidden */
+      max-height: 0; /* Crucial for smooth height transition */
+      overflow: hidden; /* Hide overflow */
+      transition: all 0.3s ease-in-out; /* Smooth transition for menu toggle */
+      background-color: #343a40; /* Slightly lighter background for mobile menu */
+      position: absolute; /* Position relative to navbar, allows it to drop down */
+      top: 100%; /* Start below the navbar */
+      left: 0;
+      padding-bottom: 0; /* Reset padding for smooth transition */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+      gap: 0;
+    }
+  
+    .nav-menu.active {
+      height: auto; /* Allow content to dictate height (max-height helps transition) */
+      max-height: 300px; /* Max height to allow scrolling if many links. ADJUST THIS IF YOUR MENU LINKS EXCEED 300px TOTAL HEIGHT */
+      padding-bottom: 10px; /* Padding at the bottom when active */
+      padding-top: 5px;
+    }
+  
+    .nav-item {
+      margin: 0; /* Remove horizontal margin */
+      text-align: center; /* Center align links */
+    }
+  
+    .nav-links {
+      padding: 12px 15px; /* More padding for easier tapping */
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Separator between links */
+    }
+  
+    .nav-item:last-child .nav-links {
+      border-bottom: none; /* No border for the last item */
+    }
+  }
+  

@@ -1,0 +1,663 @@
+/* src/Projects.css */
+
+/* --- General Section Styles --- */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #f0f2f5; /* Light background similar to homepage */
+    color: #333;
+    text-align: center;
+    min-height: calc(100vh - 60px); /* Adjust based on Navbar height */
+    box-sizing: border-box;
+}
+
+.projects-heading {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.projects-heading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff; /* Accent color */
+    border-radius: 2px;
+}
+
+/* --- Project Categories Filter --- */
+.project-categories {
+    margin-bottom: 50px; /* More space below categories */
+    margin-top: 20px; /* Space above categories from heading */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px; /* Slightly reduced gap between buttons */
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-btn {
+    background-color: #f8f9fa; /* Lighter background for inactive */
+    color: #495057; /* Darker text for inactive */
+    border: 1px solid #e0e0e0; /* Subtle border */
+    padding: 10px 22px; /* Slightly more padding */
+    border-radius: 30px; /* More rounded, pill-like */
+    font-size: 0.95em; /* Slightly smaller font */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smoother transitions */
+    white-space: nowrap;
+    text-transform: capitalize; /* Capitalize text */
+    letter-spacing: 0.5px; /* Subtle letter spacing */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Very subtle shadow */
+}
+
+.category-btn:hover {
+    background-color: #e9ecef; /* Slightly darker on hover */
+    border-color: #d1d1d1;
+    color: #343a40;
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* More pronounced shadow */
+}
+
+.category-btn.active {
+    background-color: #007bff; /* Vibrant blue for active */
+    color: white; /* White text for active */
+    border-color: #007bff;
+    font-weight: 600; /* Bolder text for active */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Stronger shadow for active */
+    transform: translateY(-1px); /* Keep it slightly lifted */
+}
+
+.category-btn.active:hover {
+    background-color: #0056b3; /* Darker blue on hover for active */
+    border-color: #0056b3;
+    transform: translateY(-2px); /* Maintain lift effect */
+}
+
+/* --- Project Grid (Main Page) --- */
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    gap: 30px; /* Space between cards */
+    max-width: 1400px; /* Max width for the grid */
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Soft shadow */
+    width: calc(33.33% - 25px); /* Fixed width for cards */
+    overflow: hidden; /* Ensures image corners are rounded with card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack image, then info */
+    text-align: left; /* Align text within card to left */
+    cursor: pointer; /* Indicate card is clickable */
+}
+
+.project-card:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.project-image-container {
+    position: relative;
+    width: 100%;
+    height: 275px; /* Fixed height for images */
+    overflow: hidden;
+    background-color: #e9ecef; /* Fallback background for image area */
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    object-position: top center; /* Focus image from the top */
+    display: block;
+}
+
+.project-type-tag {
+    position: absolute;
+    bottom: 15px; /* Moved tag to bottom right */
+    right: 15px;
+    background-color: #007bff; /* Accent color for tag */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2; /* Ensure it's above image */
+}
+
+.project-info {
+    padding: 25px;
+    flex-grow: 1; /* Allows info section to take up remaining height */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.project-description {
+    font-size: 0.95em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 0;
+}
+
+.project-technologies {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.project-technologies strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.project-links {
+    margin-top: auto; /* Pushes links to the bottom of the card */
+    display: flex;
+    gap: 15px; /* Space between buttons */
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.95em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.github-btn {
+    background-color: #333;
+    color: white;
+}
+
+.github-btn:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+.live-btn {
+    background-color: #007bff; /* Accent blue */
+    color: white;
+}
+
+.live-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.project-btn.details-btn {
+    background-color: #17a2b8; /* A teal color */
+    color: white;
+}
+.project-btn.details-btn:hover {
+    background-color: #138496;
+}
+
+.no-projects-message {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 40px;
+    grid-column: 1 / -1; /* Center message across all columns */
+}
+
+/* --- Button to open the All Projects Modal --- */
+.view-all-projects-btn {
+    background-color: #28a745; /* A success green */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 50px; /* Space below the grid */
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+.view-all-projects-btn:hover {
+    background-color: #218838;
+    transform: translateY(-3px);
+}
+
+/* --- Individual Project Modal Styles (Popup) --- */
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1005; /* Ensure it's above everything else */
+    overflow-y: auto; /* Allow scrolling if content is tall */
+    padding: 20px; /* Padding around the modal content */
+    box-sizing: border-box;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 1280px; /* Max width for the modal */
+    width: 100%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    max-height: 90vh; /* Max height to fit within viewport */
+    box-sizing: border-box;
+
+    display: flex; /* Flex container for content and fixed links */
+    flex-direction: column; /* Stack children vertically */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Close Button */
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1100; /* Ensure close button is above everything */
+}
+
+.modal-close-btn:hover {
+    color: #333;
+}
+
+/* Modal Title */
+.modal-title {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Scrollable content wrapper for image and details */
+.modal-scroll-content {
+    flex-grow: 1; /* Allows this div to take up all available vertical space */
+    overflow-y: auto; /* Enables scrolling for this content if it overflows */
+    padding-right: 15px; /* Add some padding for the scrollbar if it appears */
+    margin-bottom: 20px; /* Space between scrollable content and fixed links */
+    box-sizing: border-box;
+}
+
+/* Modal Image Carousel */
+.modal-image-carousel {
+    position: relative;
+    width: 100%;
+    /* No fixed height here, let image height dictate it */
+    background-color: #e9ecef;
+    border-radius: 8px;
+    overflow: hidden; /* Keep this to contain image and ensure rounded corners */
+    margin-bottom: 30px; /* Keep space between carousel and details */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    /* Removed flex properties here as the wrapper is removed */
+}
+
+/* REMOVED: .modal-image-wrapper */
+
+.modal-main-image {
+    width: 100%; /* Image fills the width of its container */
+    height: auto; /* Height scales proportionally */
+    /* REMOVED: max-width and max-height */
+    /* REMOVED: object-fit: contain */
+    display: block; /* Remove extra space below image */
+}
+
+/* Carousel Navigation Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Ensure buttons are above image */
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #007bff; /* Active dot color */
+}
+
+/* REMOVED: "View Full Size" link and its container */
+/* .full-size-link-container { ... } */
+/* .full-size-link-btn { ... } */
+
+
+/* Modal Details Section */
+.modal-details-section {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #444;
+    text-align: left; /* Keep details left-aligned */
+}
+
+.modal-description {
+    margin-bottom: 20px;
+}
+
+.modal-tech-stack,
+.modal-type {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.modal-tech-stack strong,
+.modal-type strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* Fixed links container */
+.modal-links-fixed {
+    padding-top: 20px; /* Add padding above links */
+    border-top: 1px solid #eee; /* Optional: A subtle line to separate from content */
+    text-align: center; /* Center the buttons */
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Center the buttons */
+    margin-top: auto; /* Ensures it pushes to bottom of modal-content */
+}
+
+
+/* --- Styles for All Projects Modal --- */
+
+.all-projects-modal-overlay {
+    z-index: 1001; /* Higher than individual project modal */
+}
+
+.all-projects-modal-content {
+    max-width: 1280px; /* Wider modal for the project grid */
+    padding: 40px;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    background: #f0f2f5;
+}
+
+.all-projects-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.project-search-input,
+.project-category-select {
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1em;
+    width: 250px; /* Adjust width as needed */
+    box-sizing: border-box;
+}
+
+.project-search-input:focus,
+.project-category-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+
+.all-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between project cards */
+    max-height: 65vh; /* Limit height to allow scrolling within modal */
+    overflow-y: auto; /* Enable scrolling */
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Style for small project cards within the All Projects Modal */
+.project-card-small {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure cards are same height in a row */
+}
+
+.project-card-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-image-container-small {
+    width: 100%;
+    height: 220px; /* Smaller image height */
+    overflow: hidden;
+    background-color: #e9ecef;
+    position: relative;
+}
+
+.project-image-small {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-type-tag-small {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 123, 255, 0.8); /* Slightly transparent */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.project-info-small {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-title-small {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.project-tech-small {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 0;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 768px) {
+    /* General Project Section */
+    .projects-heading {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .projects-grid {
+        gap: 20px;
+    }
+    .project-card {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 350px; /* Keep max width to avoid stretching too wide */
+    }
+    .project-image-container {
+        height: 250px; /* Slightly smaller image height */
+    }
+    .project-info {
+        padding: 20px;
+    }
+    .project-title {
+        font-size: 1.5em;
+    }
+    .project-description {
+        font-size: 0.9em;
+    }
+    .project-links {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px;
+    }
+    .project-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Category Buttons */
+    .project-categories {
+        flex-direction: row; /* Keep them in a row, but wrap */
+        justify-content: center;
+        gap: 8px; /* Reduce gap further */
+        padding: 0 10px; /* Add some horizontal padding */
+    }
+    .category-btn {
+        padding: 8px 15px; /* Smaller padding */
+        font-size: 0.85em; /* Smaller font */
+    }
+
+    /* Load More Button */
+    .load-more-btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    /* Individual Project Modal */
+    .modal-content {
+        padding: 20px;
+        max-width: 95%; /* Adjust max width for smaller screens */
+    }
+    .modal-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .modal-image-carousel {
+        height: auto; /* Let content height control it */
+        max-height: 40vh; /* Limit the visual height of the image area on mobile */
+    }
+    .carousel-btn {
+        font-size: 1.2em;
+        padding: 8px 12px;
+    }
+    .modal-details-section {
+        font-size: 0.95em;
+    }
+    .modal-links-fixed { /* Adjustments for fixed links on mobile */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding-top: 15px;
+    }
+    /* project-btn width for modal is already covered by the main .project-btn rule inside media query */
+
+
+    /* All Projects Modal */
+    .all-projects-modal-content {
+        padding: 20px;
+        max-width: 95%;
+    }
+    .all-projects-grid {
+        grid-template-columns: 1fr; /* Stack cards vertically on small screens */
+        gap: 15px;
+    }
+    .project-search-input,
+    .project-category-select {
+        width: 100%;
+    }
+    .project-image-container-small {
+        height: 150px;
+    }
+    .project-title-small {
+        font-size: 1em;
+    }
+    .project-tech-small {
+        font-size: 0.8em;
+    }
+}

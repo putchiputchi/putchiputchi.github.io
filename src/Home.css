@@ -1,0 +1,192 @@
+/* src/Home.css */
+
+.home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 150px); /* Adjust based on your Navbar height */
+    background-color: #f0f2f5; /* Light background */
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.greeting {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.name {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.tagline {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.call-to-action {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.primary-btn {
+    background-color: #007bff; /* A nice blue */
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: #6c757d; /* A subtle gray */
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.social-links {
+    margin-top: 40px;
+}
+
+.social-icon {
+    color: #333;
+    font-size: 1.8em;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Basic responsive adjustments */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2.5em;
+    }
+    .tagline {
+        font-size: 1.1em;
+    }
+    .call-to-action {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn {
+        width: 80%; /* Make buttons full width on small screens */
+        margin: 0 auto;
+    }
+}
+
+
+.tagline {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+/* src/Home.css */
+
+/* ... (keep your existing .home-section, .hero-content, .greeting, .name, .tagline, .call-to-action, .btn, .primary-btn, .secondary-btn, .social-links, .social-icon styles) ... */
+
+.animated-text {
+    font-weight: 700;
+    color: #007bff;
+    display: inline-block; /* Ensure it respects text flow */
+    min-width: 1px; /* Give it enough space so layout doesn't jump too much */
+    /* REMOVE THESE LINES: */
+    /* border-right: 2px solid rgba(0,0,0,0.75); */
+    /* animation: blink-caret .75s step-end infinite; */
+    /* padding-right: 2px; */
+
+    /* NEW: Add these properties to prepare for the pseudo-element cursor */
+    position: relative; /* Needed for absolute positioning of ::after if you go that route, though not strictly necessary here */
+    white-space: nowrap; /* Prevents text from wrapping within the span */
+    overflow: hidden; /* Ensures the text doesn't flow outside if it temporarily overflows min-width */
+    display: block;
+    vertical-align: middle;
+    position: relative;
+    top:-2px;
+    font-size: 130%;
+}
+
+/* NEW: Style for the blinking cursor */
+.animated-text::after {
+    content: "|"; /* The cursor character */
+    display: inline-block; /* Keep it inline with text */
+    margin-left: 3px; /* Small space between text and cursor */
+    color: #333; /* Color of the cursor */
+    font-weight: normal; /* Don't make the cursor bold like the text */
+    animation: blink-cursor .75s step-end infinite; /* Apply blink animation */
+}
+
+/* NEW: Define the blinking cursor animation */
+@keyframes blink-cursor {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* OLD: REMOVE or UPDATE this if you had it applied to .animated-text directly */
+/* @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgba(0,0,0,0.75); }
+} */
+
+
+/* Basic responsive adjustments */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2.5em;
+    }
+    .tagline {
+        font-size: 1.1em;
+    }
+    .animated-text {
+        min-width: 180px; /* Adjust for smaller screens */
+    }
+    /* Adjust cursor size for smaller screens if text size changes */
+    .animated-text::after {
+        font-size: 1em; /* Keep relative to parent font size */
+    }
+}
