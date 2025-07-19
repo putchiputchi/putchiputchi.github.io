@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.2c258b39.css",
-    "main.js": "/static/js/main.4895ecae.js",
-    "static/js/453.c173b4f9.chunk.js": "/static/js/453.c173b4f9.chunk.js",
+    "main.js": "/static/js/main.bfcf7ff2.js",
+    "static/js/453.e31f1d4d.chunk.js": "/static/js/453.e31f1d4d.chunk.js",
     "static/media/eminence1.png": "/static/media/eminence1.91a67e22425fdc90aea5.png",
     "static/media/majesticfountains1.png": "/static/media/majesticfountains1.6eb0539b49978f7dc469.png",
     "static/media/cyberalerts.png": "/static/media/cyberalerts.6d5f881f3047cdd59340.png",
@@ -10,8 +10,10 @@
     "static/media/chauvet-pro-1.png": "/static/media/chauvet-pro-1.ad0e5c86b8ad18323fb7.png",
     "static/media/gosu-1.png": "/static/media/gosu-1.59f8e947f3d472cc9db5.png",
     "static/media/BROL - home-proof-changes.jpg": "/static/media/BROL - home-proof-changes.5a0272b138c47fee8dc5.jpg",
+    "static/media/cleanairkits.png": "/static/media/cleanairkits.c9de5a10555c4ccbc907.png",
     "static/media/rosetta-About.jpg": "/static/media/rosetta-About.d51a4eb988f6c4598d72.jpg",
     "static/media/BROL - Vacations - Single.jpg": "/static/media/BROL - Vacations - Single.f82370615e2467c521db.jpg",
+    "static/media/shopify-soundroom.png": "/static/media/shopify-soundroom.d88a17836791851b96d5.png",
     "static/media/LifestimeCapsule-2.png": "/static/media/LifestimeCapsule-2.009899f61e29ba73e392.png",
     "static/media/rosetta-Home.jpg": "/static/media/rosetta-Home.db43c0f79eb607b1d1d6.jpg",
     "static/media/gosu-2.png": "/static/media/gosu-2.c3e9b931ad2faf26b7ca.png",
@@ -22,6 +24,7 @@
     "static/media/phaselabs1.png": "/static/media/phaselabs1.9a57a942331a601e5330.png",
     "static/media/The Military Heart.png": "/static/media/The Military Heart.738325ec247328c5afc8.png",
     "static/media/rosetta-Food.jpg": "/static/media/rosetta-Food.2547792e8c5103c362de.jpg",
+    "static/media/shopify-advantagebox.png": "/static/media/shopify-advantagebox.98e76cc9e5132e67c0e2.png",
     "static/media/Park Acupuncture.png": "/static/media/Park Acupuncture.493f0673899fd84d0255.png",
     "static/media/chauvet-pro-2.png": "/static/media/chauvet-pro-2.d253e644cfe63e021680.png",
     "static/media/BROL - Booking-Form-Open.jpg": "/static/media/BROL - Booking-Form-Open.3ab488401ce989ff2bcf.jpg",
@@ -37,11 +40,11 @@
     "static/media/me.jpg": "/static/media/me.6312ad5d566b5ff347a7.jpg",
     "index.html": "/index.html",
     "main.2c258b39.css.map": "/static/css/main.2c258b39.css.map",
-    "main.4895ecae.js.map": "/static/js/main.4895ecae.js.map",
-    "453.c173b4f9.chunk.js.map": "/static/js/453.c173b4f9.chunk.js.map"
+    "main.bfcf7ff2.js.map": "/static/js/main.bfcf7ff2.js.map",
+    "453.e31f1d4d.chunk.js.map": "/static/js/453.e31f1d4d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2c258b39.css",
-    "static/js/main.4895ecae.js"
+    "static/js/main.bfcf7ff2.js"
   ]
 }
